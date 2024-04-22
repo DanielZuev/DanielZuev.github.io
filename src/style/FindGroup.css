@@ -1,0 +1,14 @@
+.btn-group {
+    width: 100%;
+    /* Ensures the button group takes the full width */
+}
+
+@media (max-width: 768px) {
+
+    /* Adjust breakpoint as needed */
+    .btn-group .btn {
+        flex-grow: 1;
+        /* Makes each button grow to fill the space */
+        text-align: center;
+    }
+}

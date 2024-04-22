@@ -1,0 +1,22 @@
+.navbar {
+    width: 100%;
+    box-sizing: border-box;
+    /* Ensures padding and border are included in the width */
+}
+
+.container-fluid {
+    max-width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+/* Optional: you can add some additional styles to improve the visual appearance */
+.nav-link {
+    margin-right: 5px;
+    /* Spacing between nav items */
+}
+
+.btn-outline-danger {
+    margin-left: 15px;
+    /* Spacing after the last nav item */
+}
