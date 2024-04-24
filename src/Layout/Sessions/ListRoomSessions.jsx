@@ -12,7 +12,9 @@ const ListRoomSessions = (roomID) => {
     const [sessions, setSessions] = useState([]);
     const { authGetRequest } = useAuth();
 
-    const url = `usersession/detailsByRoomID/${roomID.roomID}`;
+    const userID = localStorage.getItem("userID")
+
+    const url = `session/findByRoomUserID/${roomID.roomID}/${userID}`;
     useEffect(() => {
         console.log(roomID.roomID)
             // Set the correct URL here
