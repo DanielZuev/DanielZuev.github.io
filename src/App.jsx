@@ -1,5 +1,7 @@
-//import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 // import { HashRouter, Routes, Route } from 'react-router-dom';
+// import { HashRouter, Route, Routes } from "react-router-dom"
+
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 import { AuthProvider } from "./context/AuthContext"
@@ -12,13 +14,11 @@ import FindRoom from "./Layout/FindRoom"
 import MySessions from "./Layout/Sessions/MySessions"
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './style/style.css'
-import { HashRouter, Route, Routes } from "react-router-dom"
-
 function App() {
 
   return (
     <AuthProvider>
-            <HashRouter>
+            <Router>
                 <Routes>
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
@@ -33,7 +33,7 @@ function App() {
                   {/* <Route path="*" element={<ProtectedRoute component={Home} />} /> */}
                   
                 </Routes>
-            </HashRouter>
+            </Router>
         </AuthProvider>
   )
 }
