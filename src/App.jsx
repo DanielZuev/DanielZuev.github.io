@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+//import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Login from "./auth/Login"
 import Register from "./auth/Register"
 import { AuthProvider } from "./context/AuthContext"
@@ -16,11 +17,11 @@ function App() {
 
   return (
     <AuthProvider>
-            <Router>
+            <HashRouter>
                 <Routes>
                   <Route path="/login" element={<Login />} />
                   <Route path="/register" element={<Register />} />
-                  
+                  <Route path="*" element={<ProtectedRoute component={Home} />} />
                   {/* Add more protected routes as needed */}
                   <Route path="/" element={<ProtectedRoute component={Home} />} />
                   <Route path="/userroom" element={<ProtectedRoute component={CreateUserRoom} />} />
@@ -30,7 +31,7 @@ function App() {
                   <Route path="/findRoom" element={<ProtectedRoute component={FindRoom} />} />
                   
                 </Routes>
-            </Router>
+            </HashRouter>
         </AuthProvider>
   )
 }
