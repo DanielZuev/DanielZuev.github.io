@@ -54,9 +54,11 @@ const Register = () => {
                 }).then(data => {
                     console.log('Success:', data);
                     localStorage.setItem("userID", data.userID) // Set the rooms data on successful fetch
+                    // Handle success (e.g., navigate, display message)
+                    data.userID ? navigate('/', { replace: true }) : setError('Wrong password or email. Please try again.');
                 });
 
-            navigate('/', { replace: true });
+            
             },
             (error) => {
             console.error('Error:', error);
