@@ -13,7 +13,8 @@ const Register = () => {
     const [error, setError] = useState(''); // State to hold error messages
 
 
-    const { postRequest } = useAuth();
+    const { postRequest, authGetRequest } = useAuth();
+    
     const navigate = useNavigate();
 
     const handleSubmit = async (e) => {
@@ -37,10 +38,24 @@ const Register = () => {
                 "studentID": studentID
             },
             (data) => {
-            console.log('Success:', data);
+            console.log('Success: hello:', data);
             localStorage.setItem("token", data.token)
-            localStorage.setItem("userID", data.userID)
+            // localStorage.setItem("userID", data.userID)
             // Handle success (e.g., navigate, display message)
+            const token = data.token;
+            const payload = token.split('.')[1];
+            const decodedPayload = JSON.parse(window.atob(payload));
+            const url = 'user/findByEmail/' + decodedPayload.sub;
+            authGetRequest(url, 
+                (error) => {
+                    console.error('Error:', error);
+                    
+                    // Handle error (e.g., display error message)
+                }).then(data => {
+                    console.log('Success:', data);
+                    localStorage.setItem("userID", data.userID) // Set the rooms data on successful fetch
+                });
+
             navigate('/', { replace: true });
             },
             (error) => {
