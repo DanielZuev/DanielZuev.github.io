@@ -71,21 +71,21 @@ const CreateUserRoom = () => {
     <>
       <NavBar />
       <div className="container mt-4">
-          <h2>Create New Room</h2>
+          <h2>Create New Group</h2>
           <form onSubmit={handleSubmit}>
               <div className="mb-3">
-                  <label htmlFor="roomName" className="form-label">Room Name</label>
+                  <label htmlFor="roomName" className="form-label">Group Name</label>
                   <input type="text" className="form-control" id="roomName" value={roomName} onChange={(e) => setRoomName(e.target.value)} placeholder="Room Name" required />
               </div>
               <div className="mb-3">
-                  <label htmlFor="roomDescription" className="form-label">Room Description</label>
+                  <label htmlFor="roomDescription" className="form-label">Group Description</label>
                   <input type="text" className="form-control" id="roomDescription" value={roomDescription} onChange={(e) => setRoomDescription(e.target.value)} placeholder="Room Description" required />
               </div>
               <div className="mb-3">
-                  <label htmlFor="roomHeading" className="form-label">Room Heading</label>
+                  <label htmlFor="roomHeading" className="form-label">Group Heading</label>
                   <input type="text" className="form-control" id="roomHeading" value={roomHeading} onChange={(e) => setRoomHeading(e.target.value)} placeholder="Room Heading" required />
               </div>
-              <button type="submit" className="btn btn-primary">Create Room</button>
+              <button type="submit" className="btn btn-primary">Create Group</button>
           </form>
           {error && <div className="alert alert-danger mt-3">{error}</div>}
       </div>

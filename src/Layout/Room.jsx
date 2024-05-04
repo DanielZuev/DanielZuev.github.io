@@ -31,10 +31,10 @@ const Room = ({ roomDetails, userRoomRelationship, isRoomSelectedSetter }) => {
             default:
                 return (
                     <>
-                        <h2>Room Information</h2>
-                        <p><strong>Room Name:</strong> {roomDetails.roomName}</p>
-                        <p><strong>Room Heading:</strong> {roomDetails.roomHeading}</p>
-                        <p><strong>Room Description:</strong> {roomDetails.roomDescription}</p>
+                        <h2>Group Information</h2>
+                        <p><strong>Group Name:</strong> {roomDetails.roomName}</p>
+                        <p><strong>Group Heading:</strong> {roomDetails.roomHeading}</p>
+                        <p><strong>Group Description:</strong> {roomDetails.roomDescription}</p>
                         {isRoomMember ? (
                             !isAdmin ? 
                             <>

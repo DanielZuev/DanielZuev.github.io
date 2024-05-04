@@ -77,7 +77,7 @@ const FindRoom = () => {
                         ))}
                         </div>
                     ) : (
-                            <p className="text-center">You are not part of any rooms yet.</p>
+                            <p className="text-center">You are not part of any groups yet.</p>
                         )}
                     </ul>
                 </div> ) :
