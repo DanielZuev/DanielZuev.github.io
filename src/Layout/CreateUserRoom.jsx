@@ -75,15 +75,15 @@ const CreateUserRoom = () => {
           <form onSubmit={handleSubmit}>
               <div className="mb-3">
                   <label htmlFor="roomName" className="form-label">Group Name</label>
-                  <input type="text" className="form-control" id="roomName" value={roomName} onChange={(e) => setRoomName(e.target.value)} placeholder="Room Name" required />
+                  <input type="text" className="form-control" id="roomName" value={roomName} onChange={(e) => setRoomName(e.target.value)} placeholder="Group Name" required />
               </div>
               <div className="mb-3">
                   <label htmlFor="roomDescription" className="form-label">Group Description</label>
-                  <input type="text" className="form-control" id="roomDescription" value={roomDescription} onChange={(e) => setRoomDescription(e.target.value)} placeholder="Room Description" required />
+                  <input type="text" className="form-control" id="roomDescription" value={roomDescription} onChange={(e) => setRoomDescription(e.target.value)} placeholder="Group Description" required />
               </div>
               <div className="mb-3">
                   <label htmlFor="roomHeading" className="form-label">Group Heading</label>
-                  <input type="text" className="form-control" id="roomHeading" value={roomHeading} onChange={(e) => setRoomHeading(e.target.value)} placeholder="Room Heading" required />
+                  <input type="text" className="form-control" id="roomHeading" value={roomHeading} onChange={(e) => setRoomHeading(e.target.value)} placeholder="Group Heading" required />
               </div>
               <button type="submit" className="btn btn-primary">Create Group</button>
           </form>
