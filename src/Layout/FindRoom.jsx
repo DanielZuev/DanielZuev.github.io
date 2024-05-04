@@ -50,7 +50,7 @@ const FindRoom = () => {
                                 id="roomName"
                                 type="text"
                                 className="form-control"
-                                placeholder="Enter room name..."
+                                placeholder="Enter group name..."
                                 value={roomName}
                                 onChange={handleInputChange}
                             />
