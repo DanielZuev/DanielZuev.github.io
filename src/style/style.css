@@ -58,8 +58,7 @@ body {
     }
 
     .left-box {
-        height: 100px;
-        overflow: hidden;
+        height: 300px;
     }
 
     .right-box {
