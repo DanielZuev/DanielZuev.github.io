@@ -1,7 +1,7 @@
 
 import PropTypes from 'prop-types'; // Import PropTypes
 import { useAuth } from '../../context/AuthContext';
-
+import React from 'react';
 function ActionLeaveRoomButton({ roomID, setIsRoomMember }) {
     const userID = localStorage.getItem("userID");
     const { authDeleteRequest } = useAuth();

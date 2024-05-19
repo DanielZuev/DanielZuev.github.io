@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import { useAuth } from '../context/AuthContext'; // Assuming useAuth is correctly set up to provide authGetRequest
 import RoomDescription from './RoomDescription';
 import Room from './Room';

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import PropTypes from 'prop-types'; // Import PropTypes
 import { useAuth } from '../context/AuthContext';
 import Room from './Room';

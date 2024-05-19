@@ -1,5 +1,5 @@
 // src/context/AuthContext.js
-import { createContext, useContext, useState } from 'react';
+import React, { createContext, useContext, useState } from 'react';
 import usePostRequest from './usePostRequest';
 import useAuthPostRequest from './useAuthPostRequest';
 import useAuthGetRequest from './useAuthGetRequest';
